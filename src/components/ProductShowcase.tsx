@@ -14,7 +14,7 @@ export const ProductShowcase = () => {
     scrollYProgress.on("change", (latestValue) =>
       console.log("latestValue", latestValue)
     );
-  }, []);
+  });
   const rotateX = useTransform(scrollYProgress, [0,1], [15, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [.5, 1]);
 
