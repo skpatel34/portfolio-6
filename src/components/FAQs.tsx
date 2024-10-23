@@ -32,6 +32,8 @@ const items = [
 const AccordionItem = ({
   question,
   answer,
+
+  
 }: {
   question: string;
   answer: string;
@@ -48,7 +50,7 @@ const AccordionItem = ({
       </div>
       <AnimatePresence>
         {isOpen && (
-          <motion.div  
+          <motion.div
             initial={{
               opacity: 0,
               height: 0,
@@ -56,8 +58,8 @@ const AccordionItem = ({
             }}
             animate={{
               opacity: 1,
-              height: 'auto',
-              marginTop: '16px',
+              height: "auto",
+              marginTop: "16px",
             }}
             exit={{
               opacity: 0,

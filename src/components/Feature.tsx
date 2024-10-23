@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import EcosystemIcon from "@/assets/icons/ecosystem.svg";
 import { useEffect, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
@@ -18,13 +18,13 @@ export const Feature = ({
     const updateMousePosition = (e: MouseEvent) => {
       if (!border.current) return;
       const borderRect = border.current?.getBoundingClientRect();
-      offsetX.set (e.x - borderRect.x);
-      offsetY.set (e.y - borderRect.y);
+      offsetX.set(e.x - borderRect.x);
+      offsetY.set(e.y - borderRect.y);
     };
-    window.addEventListener('mousemove', updateMousePosition);
+    window.addEventListener("mousemove", updateMousePosition);
     return () => {
-      window.removeEventListener('mousemove', updateMousePosition);
-    }
+      window.removeEventListener("mousemove", updateMousePosition);
+    };
   });
 
   return (
